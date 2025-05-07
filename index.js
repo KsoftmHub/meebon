@@ -9,7 +9,16 @@ import path from 'path';
 const program = new Command();
 
 const createProject = async (projectName) => {
-  const templatesDir = path.resolve('./templates');
+  const templatesDir = path.join(__dirname, '../templates'); // Use __dirname to resolve the templates directory
+
+  // Ensure the templates directory exists
+  try {
+    await fs.access(templatesDir);
+  } catch {
+    console.log(`Templates directory not found. Creating: ${templatesDir}`);
+    await fs.mkdir(templatesDir, { recursive: true });
+  }
+
   const templateFolders = await fs.readdir(templatesDir, { withFileTypes: true });
   const templateChoices = templateFolders
     .filter(dirent => dirent.isDirectory())
@@ -33,7 +42,7 @@ const createProject = async (projectName) => {
 program
   .name('meebon-cli')
   .description('CLI tool for managing submodules and scaffolding projects')
-  .version('1.0.0');
+  .version('1.3.6');
 
 program
   .argument('<projectName>', 'Name of the project to create')
