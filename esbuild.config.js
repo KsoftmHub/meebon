@@ -1,6 +1,6 @@
 import { build } from 'esbuild';
 import { rm } from 'fs/promises';
-import pkg from "./package.json" assert { type: "json" };
+import pkg from "./package.json";
 
 await rm("dist", { force: true, recursive: true });
 
