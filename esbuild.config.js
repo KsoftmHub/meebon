@@ -1,10 +1,15 @@
-const esbuild = require('esbuild');
+const { build } = require('esbuild');
+const fs = require('fs/promises');
 
-esbuild.build({
-  entryPoints: ['src/index.js'],
+fs.rm("dist", { force: true, recursive: true });
+
+build({
+  entryPoints: ['index.js'],
   bundle: true,
-  outfile: 'dist/bundle.js',
+  outfile: 'dist/index.js',
   platform: 'node',
-  target: 'node14',
+  target: 'node18',
   sourcemap: true,
+}).then(() => {
+  console.log('Build completed successfully');
 }).catch(() => process.exit(1));

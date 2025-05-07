@@ -1,16 +1,16 @@
 {
   "name": "@meebon/meebon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI tool for project scaffolding",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "bin": {
     "create-meebon": "./index.js"
   },
   "scripts": {
     "start": "node index.js",
     "prepublishOnly": "npm run build",
-    "build": "esbuild src/index.js --bundle --outfile=dist/bundle.js --platform=node"
+    "build": "esbuild esbuild.config.js"
   },
   "files": [
     "dist",
