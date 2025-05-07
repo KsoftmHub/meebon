@@ -1,14 +1,16 @@
 {
   "name": "@meebon/meebon",
-  "version": "1.0.3",
+  "version": "1.2.0",
   "description": "A CLI tool for project scaffolding",
-  "main": "index.js",
-  "type": "commonjs",
+  "main": "./dist/index.js",
+  "type": "module",
   "bin": {
-    "create-meebon": "./index.js"
+    "create-meebon": "./dist/index.js"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./dist/index.js",
+    "template": "node ./repo.js",
+    "dev": "node ./index.js",
     "prepublishOnly": "npm run build",
     "build": "node esbuild.config.js"
   },
@@ -17,11 +19,12 @@
     "templates"
   ],
   "dependencies": {
+    "commander": "^13.1.0",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
-    "semantic-release": "^20.0.0",
-    "esbuild": "^0.19.0"
+    "esbuild": "^0.19.0",
+    "semantic-release": "^20.0.0"
   },
   "release": {
     "branches": [
