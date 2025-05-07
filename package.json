@@ -1,0 +1,26 @@
+{
+  "name": "@meebon/meebon",
+  "version": "1.0.0",
+  "description": "A CLI tool for project scaffolding",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-meebon": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meebon/cli-scaffolder.git"
+  },
+  "author": "Meebon Team",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
