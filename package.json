@@ -1,6 +1,6 @@
 {
   "name": "@meebon/meebon",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A CLI tool for project scaffolding",
   "main": "./dist/index.js",
   "type": "module",
@@ -12,7 +12,7 @@
     "template": "node ./repo.js",
     "dev": "node ./index.js",
     "prepublishOnly": "npm run build",
-    "build": "node esbuild.config.js"
+    "build": "node esbuild.config.cjs"
   },
   "files": [
     "dist",
