@@ -1,6 +1,6 @@
 {
   "name": "@meebon/meebon",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A CLI tool for project scaffolding",
   "main": "./dist/index.js",
   "type": "module",
