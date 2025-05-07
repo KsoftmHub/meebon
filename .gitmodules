@@ -1,3 +1,6 @@
 [submodule "templates/meebon-mono"]
 	path = templates/meebon-mono
 	url = https://github.com/KsoftmHub/meebon-mono.git
+[submodule "templates/meebon-package-template"]
+	path = templates/meebon-package-template
+	url = https://github.com/KsoftmHub/meebon-package-template.git
