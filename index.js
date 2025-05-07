@@ -42,7 +42,7 @@ const createProject = async (projectName) => {
 program
   .name('meebon-cli')
   .description('CLI tool for managing submodules and scaffolding projects')
-  .version('1.3.6');
+  .version('1.3.7');
 
 program
   .argument('<projectName>', 'Name of the project to create')

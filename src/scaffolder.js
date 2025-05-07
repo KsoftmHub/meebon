@@ -3,7 +3,7 @@ import path from 'path';
 
 export async function scaffoldProject(projectName, template) {
   const targetDir = path.resolve(process.cwd(), projectName);
-  const templateDir = path.resolve('./templates', template);
+  const templateDir = path.join(__dirname, '../templates', template);
 
   try {
     // Check if target directory exists
