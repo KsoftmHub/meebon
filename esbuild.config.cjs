@@ -9,9 +9,8 @@ const pkg = require("./package.json");
     entryPoints: ['index.js'],
     format: "cjs",
     bundle: true,
-    outfile: 'dist/index.js',
+    outfile: 'dist/index.cjs',
     platform: 'node',
-    // target: 'node18',
     sourcemap: true,
     external: Object.keys(pkg.dependencies),
   }).then(() => {
