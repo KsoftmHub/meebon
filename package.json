@@ -1,6 +1,6 @@
 {
   "name": "@meebon/meebon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI tool for project scaffolding",
   "main": "index.js",
   "type": "commonjs",
@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "prepublishOnly": "npm run build",
-    "build": "esbuild esbuild.config.js"
+    "build": "node esbuild.config.js"
   },
   "files": [
     "dist",
