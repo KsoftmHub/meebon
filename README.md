@@ -21,7 +21,7 @@ The Meebon project is a monorepo designed to manage multiple packages and module
 To use this CLI tool globally, install it via npm:
 
 ```bash
-npm install -g meebon
+npm install -g create-meebon
 ```
 
 ## Usage

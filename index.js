@@ -8,7 +8,7 @@ import path from 'path';
 
 const program = new Command();
 
-const createProject = async (projectName, options) => {
+const createProject = async (projectName) => {
   const templatesDir = path.resolve('./templates');
   const templateFolders = await fs.readdir(templatesDir, { withFileTypes: true });
   const templateChoices = templateFolders
@@ -36,8 +36,7 @@ program
   .version('1.0.0');
 
 program
-  .command('create <projectName>')
-  .description('Create a new project from a template')
+  .argument('<projectName>', 'Name of the project to create')
   .action(createProject);
 
 program.parse(process.argv);
