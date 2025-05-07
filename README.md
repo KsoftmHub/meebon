@@ -1,12 +1,20 @@
-# meebon
+# Meebon Project
 
-A CLI tool for scaffolding new projects using predefined templates.
+## Overview
+
+The Meebon project is a monorepo designed to manage multiple packages and modules efficiently. It provides a streamlined development workflow and supports publishing packages to a package registry.
 
 ## Features
 
 - Interactive prompts for project name and template selection.
 - Dynamically fetches available templates from the `templates` directory.
 - Automatically sets up the project structure and updates `package.json`.
+
+## Prerequisites
+
+- Node.js (>= 14.x)
+- npm or yarn or pnpm
+- Git
 
 ## Installation
 
